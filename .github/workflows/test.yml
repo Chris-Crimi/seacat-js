@@ -1,0 +1,17 @@
+# Runs in the public mirror (github.com/Chris-Crimi/seacat-js). Inert in the monorepo, where the workflow at its
+# root tests the clients alongside the server.
+name: test
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+      - run: node --test
+      - run: npm install --no-audit --no-fund
+      - run: npm run typecheck

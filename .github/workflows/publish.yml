@@ -1,0 +1,26 @@
+# Publishes to npm on a version tag, e.g. `git tag v0.1.0 && git push --tags`.
+#
+# Uses npm trusted publishing, so there's no token to leak: configure this repository and workflow as a trusted
+# publisher on npmjs.com first (your package -> Settings -> Trusted publisher). It also attaches provenance.
+name: publish
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write  # for trusted publishing and provenance
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          registry-url: "https://registry.npmjs.org"
+      - run: npm install -g npm@latest  # trusted publishing needs npm 11.5.1 or later
+      - run: node --test
+      - run: npm publish

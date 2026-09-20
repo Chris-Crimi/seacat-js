@@ -1,0 +1,51 @@
+{
+  "name": "seacat",
+  "version": "0.1.0",
+  "description": "Client for the SeaCat API: typed decisions with calibrated probabilities.",
+  "keywords": [
+    "seacat",
+    "classification",
+    "decisions",
+    "probabilities",
+    "api",
+    "client"
+  ],
+  "homepage": "https://seacat.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chris-Crimi/seacat-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Chris-Crimi/seacat-js/issues"
+  },
+  "author": "Ship Systems LLC",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
