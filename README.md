@@ -68,7 +68,8 @@ answers.fit.mean              // 1.75 — scale questions only: the expected lev
 answers.wantsPricing.isYes    // true
 
 const { model, usage, timing, raw } = await sc.decide(state, questions);
-// timing: Server-Timing as { name: ms }, for debugging — where the server spent the request
+// timing: Server-Timing as { name: ms } — where the server spent the request. Empty for an answer
+//   collected from the queue, which the API doesn't time.
 // raw: the response exactly as the API sent it
 ```
 
