@@ -5,11 +5,11 @@ back structured answers with probabilities and a certainty score your code can b
 uses the runtime's `fetch` (Node 18+, Bun, Deno, Cloudflare Workers).
 
 ```bash
-npm install seacat
+npm install seacat-ai
 ```
 
 ```ts
-import { SeaCat, category, scale, yesNo } from "seacat";
+import { SeaCat, category, scale, yesNo } from "seacat-ai";
 
 const sc = new SeaCat(); // or new SeaCat({ apiKey: "tz_..." }) — the default reads SEACAT_API_KEY
 

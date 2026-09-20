@@ -1,9 +1,10 @@
 {
-  "name": "seacat",
+  "name": "seacat-ai",
   "version": "0.1.0",
   "description": "Client for the SeaCat API: typed decisions with calibrated probabilities.",
   "keywords": [
     "seacat",
+    "seacat-ai",
     "classification",
     "decisions",
     "probabilities",

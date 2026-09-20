@@ -2,7 +2,7 @@
  * SeaCat API client. Typed decisions over HTTP, with no dependencies: it uses the runtime's `fetch`
  * (Node 18+, Bun, Deno, Cloudflare Workers).
  *
- *   import { SeaCat, category, scale, yesNo } from "seacat";
+ *   import { SeaCat, category, scale, yesNo } from "seacat-ai";
  *
  *   const sc = new SeaCat(); // reads SEACAT_API_KEY
  *   const d = await sc.decide("Budget is approved and we need this live before November.", {
