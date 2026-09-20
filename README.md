@@ -143,5 +143,5 @@ type tests in `types.test-d.ts`, which is the only thing TypeScript is needed fo
 
 ## License
 
-MIT — see [LICENSE](LICENSE). The client is MIT so you can install, read and modify it freely. The SeaCat
+MIT — see [LICENSE](https://github.com/Chris-Crimi/seacat-js/blob/main/LICENSE). The client is MIT so you can install, read and modify it freely. The SeaCat
 service it calls is a separate, proprietary product, governed by the [Terms](https://seacat.dev/terms).
